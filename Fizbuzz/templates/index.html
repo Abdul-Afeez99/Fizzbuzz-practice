@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    {% for number in numbers %}
+        <ul>
+            {%if number%3==0 and number%5==0 %}
+                <li> FizzBuzz </li>
+            {% elif number % 3 == 0 %}
+                <li> Fizz </li>
+            {% elif number % 5 == 0 %}
+                <li> Buzz </li>
+            {% else %}
+                <li> {{number}} </li>
+            {% endif %}
+        </ul>
+    {% endfor %}
+</body>
+</html>
